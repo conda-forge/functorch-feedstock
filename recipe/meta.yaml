@@ -32,18 +32,18 @@ requirements:
     - {{ compiler('cxx') }}
     - python                                   # [build_platform != target_platform]
     - cross-python_{{ target_platform }}       # [build_platform != target_platform]
-    - pytorch                                  # [build_platform != target_platform]
+    - pytorch <1.13                            # [build_platform != target_platform]
 
   host:
     - pip
     - python
-    - pytorch
+    - pytorch <1.13
   run:
     - python
     # we rely on global pinning to resolve pytorch
     # functorch 0.1.x requires pytorch 1.11.x
     # functorch 0.2.x requires pytorch 1.12.x
-    - pytorch
+    - pytorch <1.13
 
 test:
   source_files:
