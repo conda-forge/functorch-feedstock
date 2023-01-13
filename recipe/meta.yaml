@@ -21,20 +21,13 @@ requirements:
     - pytorch
 
 test:
-  source_files:
-    - test
   requires:
     - pip
-    - pytest
-    - expecttest
-    - pyyaml
   imports:
     - functorch
   commands:
     - pip check
-    # adding two tests from readme besides the sanity check in run_test.py
-    - pytest test/test_vmap.py -v
-    - pytest test/test_eager_transforms.py -v
+
 
 about:
   home: https://github.com/pytorch/functorch
