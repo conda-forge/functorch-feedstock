@@ -1,12 +1,12 @@
 {% set version = "1.13.0" %}
 
- package:
-   name: functorch
-   version: {{ version }}
+package:
+  name: functorch
+  version: {{ version }}
 
- source:
-   url: https://github.com/pytorch/functorch/archive/v{{ version }}.tar.gz
-   sha256: f4788e3d25f25e89aee90f8e9a4eb09ed51c55553b27a6e85c894743d90a600c
+source:
+  url: https://github.com/pytorch/functorch/archive/v{{ version }}.tar.gz
+  sha256: f4788e3d25f25e89aee90f8e9a4eb09ed51c55553b27a6e85c894743d90a600c
 
 build:
   number: 0
@@ -14,11 +14,10 @@ build:
 
 requirements:
   host:
-    - pip
-    - python
+    - python >=3.7
     - pytorch
   run:
-    - python
+    - python >=3.7
     - pytorch
 
 test:
