@@ -5,6 +5,8 @@ package:
   version: {{ version }}
 
 source:
+  # This is a dummy package and has been included into pytorch itself
+  # https://github.com/pytorch/functorch/releases/tag/v1.13.0
   url: https://github.com/pytorch/functorch/archive/v{{ version }}.tar.gz
   sha256: f4788e3d25f25e89aee90f8e9a4eb09ed51c55553b27a6e85c894743d90a600c
 
